@@ -1,4 +1,4 @@
-def call(string stageName){
+def call(String stageName){
 	if ("${stageName}" == "build"){
 		sh "mvn clean build"
 		}
