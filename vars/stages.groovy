@@ -13,7 +13,7 @@ def call(String stageName){
 	else if("${stageName}" == "DeployIntoTomcat")
 	{
 		sshagent(['45932c08-4117-438a-bfe7-4700629c2b50']) {
-		sh "scp -o StrictHostKeyChecking=no /target/maven-web-application.war ec2-user@65.0.91.17:/opt/apache-tomcat-9.0.46/webapps"
+		sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.0.91.17:/opt/apache-tomcat-9.0.46/webapps"
 		}
 	}
 	else if("${stageName}" == "success")
